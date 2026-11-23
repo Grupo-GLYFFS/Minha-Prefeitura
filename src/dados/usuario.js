@@ -6,6 +6,8 @@ export const USUARIO = {
   nome: 'Maria Souza',
   primeiroNome: 'Maria',
   iniciais: 'MS',
+  // Foto do perfil (public/img/usuarios); conta nova não tem e mostra as iniciais
+  foto: 'img/usuarios/maria.jpg',
   email: 'maria@exemplo.com',
   cpf: '529.982.247-25',
   celular: '(11) 91234-5678',

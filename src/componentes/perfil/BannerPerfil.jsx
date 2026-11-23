@@ -10,7 +10,7 @@ export default function BannerPerfil({ usuario, foto, aoTrocarFoto }) {
     <section className={classes.banner} aria-label="Seus dados">
       <button
         type="button"
-        className={classes.foto}
+        className={`${classes.foto} ${foto ? classes.comFoto : ''}`}
         aria-haspopup="dialog"
         aria-label="Trocar foto"
         onClick={aoTrocarFoto}

@@ -1,0 +1,15 @@
+/* Com foto, o avatar vira círculo e a imagem ocupa ele todo
+   (classe dobrada para valer sobre o raio e o fundo de quem usa) */
+.comFoto.comFoto {
+  overflow: hidden;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.imagem {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}

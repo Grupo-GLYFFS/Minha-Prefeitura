@@ -5,6 +5,8 @@ import { usePainelAberto } from './usePainelAberto';
 import { useSessao } from '../../contexto/useSessao';
 import { useCaminhoConta } from '../../contexto/useCaminhoConta';
 import { useSair } from '../../contexto/useSair';
+import { useFotoPerfil } from '../../contexto/useFotoPerfil';
+import Avatar from '../Avatar';
 import { MENU_CONTA } from '../../dados/navegacao';
 import classes from './MenuConta.module.css';
 import painel from './PainelMenu.module.css';
@@ -18,6 +20,7 @@ export default function MenuConta() {
   const { usuario } = useSessao();
   const caminhos = useCaminhoConta();
   const sairDaConta = useSair();
+  const { foto } = useFotoPerfil();
   const { pathname } = useLocation();
   const { aberto, fechar, alternar, refContorno, aoTeclar } = usePainelAberto();
 
@@ -47,9 +50,7 @@ export default function MenuConta() {
         aria-controls="menu-conta"
         onClick={alternar}
       >
-        <span className={classes.avatar} aria-hidden="true">
-          {usuario.iniciais}
-        </span>
+        <Avatar className={classes.avatar} foto={foto} iniciais={usuario.iniciais} />
         <span className={classes.nome}>{usuario.primeiroNome}</span>
         <Icone nome="expand_more" tamanho={20} />
       </button>
@@ -64,9 +65,7 @@ export default function MenuConta() {
               aria-label={`Meu perfil de ${usuario.nome}, ${usuario.email}`}
               onClick={fechar}
             >
-              <span className={classes.quemAvatar} aria-hidden="true">
-                {usuario.iniciais}
-              </span>
+              <Avatar className={classes.quemAvatar} foto={foto} iniciais={usuario.iniciais} />
               <span className={classes.quemTexto} aria-hidden="true">
                 <span className={classes.quemNome}>{usuario.nome}</span>
                 <span className={classes.quemEmail}>{usuario.email}</span>

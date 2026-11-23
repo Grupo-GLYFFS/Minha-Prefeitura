@@ -5,6 +5,8 @@ import Icone from '../Icone';
 import { useSessao } from '../../contexto/useSessao';
 import { useCaminhoConta } from '../../contexto/useCaminhoConta';
 import { useSair } from '../../contexto/useSair';
+import { useFotoPerfil } from '../../contexto/useFotoPerfil';
+import Avatar from '../Avatar';
 import { useNotificacoes } from '../../contexto/useNotificacoes';
 import { MENU_CONTA } from '../../dados/navegacao';
 import classes from './FolhaMais.module.css';
@@ -67,6 +69,7 @@ export default function FolhaMais({ aberto, aoFechar }) {
   const { usuario } = useSessao();
   const caminhos = useCaminhoConta();
   const sairDaConta = useSair();
+  const { foto } = useFotoPerfil();
   const { naoLidas } = useNotificacoes();
 
   // Notificações entra depois de "O que você segue", antes de Configurações
@@ -99,9 +102,7 @@ export default function FolhaMais({ aberto, aoFechar }) {
             aria-label={`Meu perfil de ${usuario.nome}`}
             onClick={aoFechar}
           >
-            <span className={classes.avatar} aria-hidden="true">
-              {usuario.iniciais}
-            </span>
+            <Avatar className={classes.avatar} foto={foto} iniciais={usuario.iniciais} />
             <span className={classes.quemTexto} aria-hidden="true">
               <b className={classes.quemNome}>{usuario.nome}</b>
               <small className={classes.quemMeta}>Meu perfil</small>

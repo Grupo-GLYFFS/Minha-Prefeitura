@@ -35,6 +35,11 @@
   outline-offset: 3px;
 }
 
+/* Com foto, recorte em círculo */
+.foto.comFoto {
+  border-radius: 50%;
+}
+
 .imagem {
   width: 100%;
   height: 100%;
