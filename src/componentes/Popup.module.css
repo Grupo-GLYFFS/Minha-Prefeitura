@@ -53,9 +53,12 @@
    (o Modal tem z-index 200; as abas, 190). Véu rgba(15,23,42,.48) na tela toda; raio 20
    só em cima; alça de 40 × 4; título 20; botões em partes iguais. */
 @media (max-width: $mantine-breakpoint-sm) {
+  /* O "inner" também leva a classe da caixa (raio 20 e overflow escondido): sem zerar o raio
+     dele, a folha sai cortada arredondada embaixo. */
   .inner.inner {
     align-items: flex-end;
     padding: 0;
+    border-radius: 0;
   }
 
   /* O Mantine põe a classe da caixa também no "inner": por isso o seletor é .inner > .caixa */

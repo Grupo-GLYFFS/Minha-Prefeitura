@@ -92,3 +92,28 @@
     font-size: rem(30px);
   }
 }
+
+/* Celular: barra "‹ Voltar" no alto e o logo com o formulário no meio da altura que sobra.
+   As margens automáticas centralizam; se o conteúdo passar da tela, elas zeram e a página rola. */
+@media (max-width: $mantine-breakpoint-sm) {
+  .tela {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+  }
+
+  .lado {
+    flex: 1 0 auto;
+    padding: rem(24px) rem(16px);
+  }
+
+  .barra {
+    margin-top: auto;
+    min-height: 0;
+    padding-top: 0;
+  }
+
+  .coluna {
+    margin: 0 auto auto;
+  }
+}
