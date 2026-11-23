@@ -27,7 +27,7 @@ export default function CardIntegrante({ integrante }) {
         </span>
       )}
       <div className={classes.texto}>
-        <h3 className={classes.nome}>{integrante.nome}</h3>
+        <h3 className={classes.nome} title={integrante.nome}>{integrante.nome}</h3>
         <p className={classes.rm}>RM {integrante.rm}</p>
       </div>
       <p className={classes.papel}>{integrante.papel}</p>

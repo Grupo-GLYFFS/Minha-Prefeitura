@@ -100,11 +100,11 @@ src/
 
 ## Integrantes
 
-- Gabriel de Lucca Chiapetta Santana, RM573610
-- Leonardo de Lima Dias, RM569286
 - Fabricio Cardoso Nicoli, RM571627
 - Felipe Santos, RM574050
+- Leonardo de Lima Dias, RM569286
 - Samuel Almeida Santos, RM572554
+- Gabriel de Lucca Chiapetta Santana, RM573610
 
 ## Uso de IA
 

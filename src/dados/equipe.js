@@ -3,18 +3,6 @@
 // (public/img/equipe/<primeiro-nome>.jpg; sem o arquivo, o card mostra o ícone).
 export const INTEGRANTES = [
   {
-    nome: 'Gabriel de Lucca Chiapetta Santana',
-    rm: '573610',
-    papel: 'Simulação dos pedidos',
-    foto: 'img/equipe/gabriel.jpg',
-  },
-  {
-    nome: 'Leonardo de Lima Dias',
-    rm: '569286',
-    papel: 'Formulários e acessibilidade',
-    foto: 'img/equipe/leonardo.jpg',
-  },
-  {
     nome: 'Fabricio Cardoso Nicoli',
     rm: '571627',
     papel: 'Design e protótipo',
@@ -27,10 +15,22 @@ export const INTEGRANTES = [
     foto: 'img/equipe/felipe.jpg',
   },
   {
+    nome: 'Leonardo de Lima Dias',
+    rm: '569286',
+    papel: 'Formulários e acessibilidade',
+    foto: 'img/equipe/leonardo.jpg',
+  },
+  {
     nome: 'Samuel Almeida Santos',
     rm: '572554',
     papel: 'Pesquisa, README e pitch',
     foto: 'img/equipe/samuel.jpg',
+  },
+  {
+    nome: 'Gabriel de Lucca Chiapetta Santana',
+    rm: '573610',
+    papel: 'Simulação dos pedidos',
+    foto: 'img/equipe/gabriel.jpg',
   },
 ];
 
