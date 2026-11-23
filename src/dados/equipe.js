@@ -38,6 +38,6 @@ export const INTEGRANTES = [
 // - repositorio: endereço do código no GitHub;
 // - video: link do vídeo do pitch.
 export const LINKS_PITCH = {
-  repositorio: 'https://github.com/Grupo-GLYFFS/Minha-Cidade',
+  repositorio: 'https://github.com/Grupo-GLYFFS/Minha-Prefeitura',
   video: 'https://vimeo.com/1248553385',
 };

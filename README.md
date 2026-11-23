@@ -1,6 +1,6 @@
 # Minha Prefeitura
 
-**Acesse o app:** https://grupo-glyffs.github.io/Minha-Cidade/
+**Acesse o app:** https://grupo-glyffs.github.io/Minha-Prefeitura/
 
 **Vídeo do pitch:** https://vimeo.com/1248553385
 
@@ -23,7 +23,7 @@ O Brasil tem 5.570 municípios, e quase metade deles (44,8%) tem até 10 mil hab
 
 ## Como abrir o app
 
-- **Pela internet (mais fácil):** abra https://grupo-glyffs.github.io/Minha-Cidade/ no navegador do computador ou do celular.
+- **Pela internet (mais fácil):** abra https://grupo-glyffs.github.io/Minha-Prefeitura/ no navegador do computador ou do celular.
 - **Pelo arquivo da entrega:** descompacte o .zip e dê dois cliques no `index.html` da pasta. Ele abre direto no navegador (Chrome, Edge ou Firefox), sem instalar nada. Precisa de internet só para as fontes, os ícones e a busca do CEP.
 - **Para entrar na conta de exemplo:** clique em Entrar. O e-mail e a senha da Maria já vêm preenchidos.
 
@@ -102,9 +102,9 @@ src/
 
 ## Links
 
-- App: https://grupo-glyffs.github.io/Minha-Cidade/
+- App: https://grupo-glyffs.github.io/Minha-Prefeitura/
 - Vídeo do pitch: https://vimeo.com/1248553385
-- Repositório: https://github.com/Grupo-GLYFFS/Minha-Cidade
+- Repositório: https://github.com/Grupo-GLYFFS/Minha-Prefeitura
 
 ## Integrantes
 
