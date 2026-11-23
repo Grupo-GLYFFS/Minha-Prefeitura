@@ -21,6 +21,14 @@ O Brasil tem 5.570 municípios, e quase metade deles (44,8%) tem até 10 mil hab
 - **ODS 10, Redução das desigualdades:** a cidade pequena com o mesmo atendimento digital da capital, em linguagem simples e com recursos de acessibilidade.
 - **ODS 9, Indústria, inovação e infraestrutura:** tecnologia para cuidar da rua e atender melhor, sem fila e sem telefone.
 
+## Como abrir o app
+
+- **Pela internet (mais fácil):** abra https://grupo-glyffs.github.io/Minha-Cidade/ no navegador do computador ou do celular.
+- **Pelo arquivo da entrega:** descompacte o .zip e dê dois cliques no `index.html` da pasta. Ele abre direto no navegador (Chrome, Edge ou Firefox), sem instalar nada. Precisa de internet só para as fontes, os ícones e a busca do CEP.
+- **Para entrar na conta de exemplo:** clique em Entrar. O e-mail e a senha da Maria já vêm preenchidos.
+
+Os pedidos, votos e contas que você cria ficam guardados só no seu navegador.
+
 ## O que dá para fazer no app
 
 **Serviços da prefeitura**
@@ -48,10 +56,10 @@ O Brasil tem 5.570 municípios, e quase metade deles (44,8%) tem até 10 mil hab
 **Conta**
 - Entrar com e-mail e senha. Na demonstração, os dados da Maria já vêm preenchidos; é só clicar em Entrar.
 - Criar uma conta com nome, e-mail, senha e o endereço, escolhido numa lista. O endereço define o seu bairro no app.
-- Perfil, meus pedidos, meus votos, o que você segue, notificações e configurações.
+- Perfil, meus pedidos, meus votos, o que você segue, notificações e configurações (canais de aviso e faixas de alerta).
 
 **Acessibilidade**
-- Aumentar e diminuir a letra, alto contraste e reduzir animações, sempre à mão no topo da tela.
+- Aumentar e diminuir a letra e ligar o alto contraste, sempre à mão no topo da tela.
 - Funciona no celular e no computador.
 
 ## Como cada critério foi atendido

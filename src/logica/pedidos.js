@@ -2,6 +2,7 @@ import { STATUS_PEDIDO } from '../dados/statusPedido';
 import { CATEGORIAS_PEDIDO } from '../dados/categoriasPedido';
 import { HOJE, diasEntre, tempoRelativo } from './datas';
 import { calcularPrioridade } from './prioridade';
+import { PEDIDOS } from '../dados/pedidos';
 
 // Procura os dados de um status (rótulo, cores, se está aberto).
 // Recebe o id do status (ex.: "em-analise"); devolve o objeto do status ou undefined.
@@ -37,20 +38,53 @@ const FOTOS_CATEGORIA_2 = {
   sinalizacao: 'Placa de trânsito caída na calçada de um cruzamento',
 };
 
+// Posição de cada pedido de exemplo dentro da sua categoria (0, 1, 2...), na ordem dos dados.
+// Serve para alternar as duas fotos da categoria: 1ª, 2ª, 1ª, 2ª...
+const POSICAO_NA_CATEGORIA = (() => {
+  const contagem = {};
+  const posicao = {};
+  for (const pedido of PEDIDOS) {
+    const n = contagem[pedido.categoria] ?? 0;
+    posicao[pedido.id] = n;
+    contagem[pedido.categoria] = n + 1;
+  }
+  return posicao;
+})();
+
+// Pedidos cuja foto foi escolhida pelo que ela mostra (true = 2ª foto, false = 1ª).
+const FOTO_ESCOLHIDA = {
+  'p-006': true, // calçada da escola
+  'p-034': false, // raiz levantando a calçada
+  'p-022': true, // vários buracos
+  'p-002': false,
+  'p-024': true, // praça escura
+  'p-001': false,
+  'p-015': true, // terreno com entulho
+  'p-027': false, // sofá na esquina
+  'p-020': true, // bueiro transbordando
+  'p-005': false,
+  'p-021': true, // galho rachado
+  'p-003': false, // galhos na fiação
+  'p-016': true, // placa caída
+  'p-007': false, // faixa apagada
+};
+
 // Escolhe a imagem do pedido: a foto que a pessoa enviou (pedido.foto) ou uma das fotos da categoria.
-// Quando a categoria tem a 2ª foto, a soma dos números do id decide: ímpar usa a 1ª, par usa a 2ª,
-// para que pedidos seguidos da mesma categoria tendam a mostrar fotos diferentes.
-// Recebe o pedido; devolve { src, alt } ou null quando a categoria não tem foto.
+// Os pedidos de exemplo alternam as duas fotos da categoria pela posição nos dados; um pedido novo
+// usa a soma dos números do id. Recebe o pedido; devolve { src, alt } ou null sem foto.
 export function imagemDoPedido(pedido) {
   if (pedido.foto) return { src: pedido.foto, alt: `Foto enviada: ${pedido.titulo}` };
   const alt = FOTOS_CATEGORIA[pedido.categoria];
   if (!alt) return null;
   const alt2 = FOTOS_CATEGORIA_2[pedido.categoria];
-  const somaDigitos = String(pedido.id ?? '')
-    .replace(/\D/g, '')
-    .split('')
-    .reduce((soma, digito) => soma + Number(digito), 0);
-  if (alt2 && somaDigitos % 2 === 0) {
+  const posicao =
+    POSICAO_NA_CATEGORIA[pedido.id] ??
+    String(pedido.id ?? '')
+      .replace(/\D/g, '')
+      .split('')
+      .reduce((soma, digito) => soma + Number(digito), 0);
+  const segunda = FOTO_ESCOLHIDA[pedido.id] ?? posicao % 2 === 1;
+  if (alt2 && segunda) {
     return { src: `img/pedidos/${pedido.categoria}-2.jpg`, alt: alt2 };
   }
   return { src: `img/pedidos/${pedido.categoria}.jpg`, alt };
