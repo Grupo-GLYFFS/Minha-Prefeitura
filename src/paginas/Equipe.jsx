@@ -14,10 +14,7 @@ export default function Equipe() {
   return (
     <Pagina
       cabecalho={
-        <CabecalhoGs
-          atual="equipe"
-          subtitulo={<img className={classesEquipe.logo} src="img/equipe/glyffs-escuro.svg" alt="GLYFFS" />}
-        />
+        <CabecalhoGs atual="equipe" />
       }
     >
       <div className={classes.pilha}>
